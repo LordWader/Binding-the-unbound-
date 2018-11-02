@@ -16,19 +16,10 @@ class Vector:
     def abs(self):
         """
         Return the length of Vector
-        >>> a = Vector(3, 4)
-        >>> a.abs()
-        5.0
         """
         return hypot(self.x, self.y)
         
     def __add__(self, other):
-        """
-        >>> a = Vector(3, 4)
-        >>> b = Vector(1, 2)
-        >>> a + b
-        Vector(4, 6)
-        """
         x = self.x + other.x
         y = self.y + other.y
         return Vector(x, y)
@@ -36,19 +27,10 @@ class Vector:
     def __mul__(self, scalar):
         """
         Returns the result of multiplying a vector by a number
-        >>> a = Vector(3, 4)
-        >>> scalar = 10
-        >>> a*scalar
-        Vector(30, 40)
         """
         return Vector(self.x*scalar, self.y*scalar)
 
     def __repr__(self):
-        """
-        >>> a = Vector(y = 1)
-        >>> print(a)
-        Vector(0, 1)
-        """
         return 'Vector(%s, %s)' % (self.x, self.y)    
         
     @classmethod    
